@@ -1,0 +1,24 @@
+:root {
+    --primary-color: #e0e7ef; /* light gray-blue */
+    --secondary-color: #bcd4f6; /* light blue */
+    --accent-color: #ffffff; /* white */
+    --font-family: 'Arial, sans-serif';
+}
+
+body {
+  background: linear-gradient(269deg,#cef4fa,#d6d6d6);
+  background-size: 120% 120%;
+  animation: gradient-animation 20s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
