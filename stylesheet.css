@@ -1,14 +1,12 @@
 :root {
-    --primary-color: #e0e7ef; /* light gray-blue */
-    --secondary-color: #bcd4f6; /* light blue */
-    --accent-color: #ffffff; /* white */
+    --primary-color: #daf3ff; /* light blue */
+    --secondary-color: #ffffff; /* light white */
     --font-family: 'Arial, sans-serif';
 }
 
 body {
-  background: linear-gradient(269deg,#cef4fa,#d6d6d6);
-  background-size: 120% 120%;
-  animation: gradient-animation 20s ease infinite;
+  background: linear-gradient(269deg, var(--primary-color), var(--secondary-color));
+  animation: gradient-animation 30s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -21,4 +19,28 @@ body {
   100% {
     background-position: 0% 50%;
   }
+}
+
+nav{
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width:50%;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: #e4e4e4 2px 2px 15px;
+    margin-top:30px;
+}
+
+nav ul{
+    margin:0px; 
+}
+
+nav li{
+    display:inline;
+    padding:0px 1rem;
+}
+
+#hero{
+    text-align: center;
 }
