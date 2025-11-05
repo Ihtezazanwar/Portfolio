@@ -2,29 +2,165 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script src="https://kit.fontawesome.com/51743c422a.js" crossorigin="anonymous"></script>
+  <!--Font Import-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
   <title>My Portfolio</title>
 </head>
 <body>
-
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#home">About</a></li>
+                <li><a href="#about">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects">Clients</a></li>
                 <li><a href="#contact">Contact</a></li>
+ 		<li><a href="https://www.ahallali.duckdns.org/">example</a></li>
             </ul>
             
     </header>
 
     <div id="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>This is a paragraph.</p>
-        <p>new branch!!!</p>
+        <h1 class="bluegradient">Ihtezaz Anwar</h1>
+        <h2>Web developer Specialising in <span class="bluegradient">WordPress</span> and <span class="bluegradient">Frontend Development</span></h2>
+        <h5>Over 5 years of commercial experience in the industry, delivering varied high-quality 
+            products with a strong focus on user experience and accessibility.</h5>
+            <a href="#projects" class="mainbtn">Explore my world</a>
     </div> 
 
-  
+    <div class="container" id="skills"> 
+        <h2>Skills</h2>
+        <section>
+            <div class="fe">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML5</span>
+            </div>
+            <div class="fe">
+                <i class="fa-brands fa-css3-alt"></i> 
+                <span>CSS3</span>
+            </div>
+            <div class="fe">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="fe">
+                <i class="fa-brands fa-github"></i>
+                <span>Git/Hub</span>
+            </div>
+               <div class="fe">
+                <i class="fa-brands fa-wordpress"></i>
+                <span>WordPress</span>
+            </div>
+            <div class="be">
+                <i class="fa-brands fa-php"></i>
+                <span>PHP</span>
+            </div>
+             <div class="be">
+                <i class="fa-brands fa-cpanel"></i>
+                <span>cPanel</span>
+            </div>
+            <div class="be">
+                <i class="fa-solid fa-file-arrow-up"></i>
+                <span>FTP</span>
+            </div>
+           <div class="misc">
+                <i class="fa-solid fa-image"></i>
+                <span>Photoshop</span>
+            </div>
+            <div class="misc">
+                <i class="fa-brands fa-square-figma"></i>
+                <span>Figma</span>
+            </div>
+            <div class="misc">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>SEO</span>
+            </div>
+            <div class="misc">
+                <i class="fa-brands fa-mailchimp"></i>
+                <span>Mailchimp</span>
+            </div>
+           <div class="misc">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Google Data Studio</span>
+            </div>
+           <div class="misc">
+                <i class="fa-solid fa-database"></i>
+                <span>CRM systems</span>
+            </div>
+             <div class="ss">
+                <i class="fa-solid fa-comments"></i>
+                <span>Communication</span>
+            </div>
+            <div class="ss">
+                <i class="fa-solid fa-database"></i>
+                <span>problem-solving</span>
+            </div>
+        </section>
+    </div>
+
+    <div class="container" id="projects"> 
+        <h2>Projects</h2>
+        <section>
+            <div>
+                <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Digital Skills Hub Project Image">
+                    <div class="project-info">
+                        <h5>Digital Skills Hub</h5>
+                            <p>Developed for Manchester Metropolitan University, the LMS platfrom offers a range of online workshops, quizzes,
+                                assignments and opportunities for thier first generation scholars. 
+                            </p>
+                                <div class="flex techstack">
+                                    <span>Wordpress</span>
+                                    <span>Theme development</span>
+                                    <span>PHP</span>
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                </div>
+                    </div>
+            </div>
+             <div>
+                <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Digital Skills Hub Project Image">
+                    <div class="project-info">
+                        <h5>Siân Reeves</h5>
+                            <p>Siân Reeves required a portfolio website to showcase her amazing charity album ‘Remember This' and to highlight her career
+                                 as an actor, presenter, singer and more.
+                            </p>
+                                <div class="flex techstack">
+                                    <span>Wordpress</span>
+                                    <span>Edited theme</span>
+                                    <span>PHP</span>
+                                </div>
+                    </div>
+            </div>
+             <div>
+                <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png" alt="Digital Skills Hub Project Image">
+                    <div class="project-info">
+                        <h5>Iain Mcallum</h5>
+                            <p>Publicist Iain McCallum required an online portfolio to showcase his clients work. The website features a modern design 
+                                with bold features to highlight his services. The brand also encompases his famous glasses as his logo.  
+                            </p>
+                                <div class="flex techstack">
+                                    <span>Wordpress</span>
+                                    <span>Edited theme</span>
+                                    <span>PHP</span>
+                                </div>
+                    </div>
+            </div>
+        </section>
+    </div>
+
+     <div class="container" id="lighter-blue"> 
+        <h2>Clients</h2>
+        <section>
+            <div class="box1">Box 1</div>
+            <div class="box2">Box 2</div>
+            <div class="box3">Box 3</div>
+        </section>
+    </div>
 
 </body>
 </html>
