@@ -163,18 +163,18 @@ nav ul li a:hover {
 }
 
 #skills{
-  background: linear-gradient(181deg, #0e0e0e, #060602);
+  background: linear-gradient(181deg, #1e1e1e, #060602);
   color: var(--white);
 }
 
 #projects{
-  background: linear-gradient(181deg, #272727, #060602);
+  background: linear-gradient(181deg, #181818, #060602);
   color: var(--white);
 }
 
-#lighter-blue{
-  background:none;
-  background-color: #01a0ef;
+#clients{
+ background: linear-gradient(181deg, #1c1c1c, #060602);
+  color: var(--white);
 }
 
 section {
@@ -195,6 +195,15 @@ section {
   border-radius: 8px;
 }
 
+#skills section .other {
+  flex: 0 1 calc(100% / 4 - 20px); /* grow, shrink, basis */
+  background-color: var(--medgray);
+  color: var(--white);
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-top:60px;
+}
+
 
 #projects section div {
   flex: 0 1 calc(100% / 3 - 20px); /* grow, shrink, basis */
@@ -202,6 +211,16 @@ section {
   color: var(--white);
   padding: 0px;
   border-radius: 8px;
+}
+
+#clients section div {
+  flex: 0 1 calc(100% / 6 - 20px); /* grow, shrink, basis */
+  background-color: var(--white);
+  color: var(--white);
+  padding: 10px;
+  border-radius: 8px; 
+  height:100px;
+  width:100px; 
 }
 
 section div {
@@ -214,7 +233,7 @@ section div {
 
 /*******Skills Icons*******/
 
-.container .fe i, .container .be i, .container .misc i,  .container .ss i{
+.container .fe i, .container .be i, .container .misc i,  .container .ss i, .container .other i{
   font-size: 35px;
 }
 
@@ -250,6 +269,14 @@ section div {
   color:lightblue; 
 }
 
+.container .other{
+  box-shadow: 0px 0px 3px lightblue;
+}
+
+.other i{
+  color:lightblue; 
+}
+
 section div span{
   display:block;
   margin-top:12px;
@@ -261,12 +288,19 @@ section div span{
 #projects section div .project-info{
   padding:20px;
 }
-
+ 
 
 #projects img{
   width:100%;
-  height:auto;
+  height:200px;
   border-radius: 8px 8px 0px 0px;
+  object-fit: cover;
+}
+
+#clients img{
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .project-info {
@@ -285,6 +319,11 @@ section div span{
   flex:0 1 auto;
   border:1px solid var(--hilightgray);
 }
+
+
+/*******Clients Section*******/
+
+
 
 /*******Responsive Styles*******/
 
