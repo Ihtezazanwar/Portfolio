@@ -8,7 +8,9 @@
     --medgray: #1c1a19; /* medium gray */
     --lightgray:#292a28; /* lightgray */
     --hilightgray: #b8b8b8; /* light gray */
+    --Iconbk: #1c1a1950; /* icon Back */
     --cont-width: 1200px; /* max content width */
+
 
 }
 
@@ -114,8 +116,6 @@ body {
 }
 
 
-
-
 .fade-in {
 	opacity: 1;
 	animation-name: fadeInOpacity;
@@ -139,14 +139,18 @@ body {
 
 /*******Nav Styles*******/
 
+header {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 0px 0px 0px;
+}
+
 nav {
     background-color: var(--darkgray);
-    width:50%;
     margin: auto;
     border-radius: 9999px;
     padding: 20px;
     box-shadow: var(--hilightgray) 0px 0px 8px;
-    margin-top:30px;
 }
 
 nav ul {
@@ -178,7 +182,7 @@ nav ul li a:hover {
 #hero{
     text-align: center;
     color: var(--white);
-    margin:4% auto;
+    margin: 40px 50px;
     max-width: var(--cont-width);
 }
 
@@ -226,7 +230,7 @@ section {
 }
 
 #skills section div {
-  flex: 0 1 calc(100% / 8 - 20px); /* grow, shrink, basis */
+  flex: 0 1 calc(100% / 6 - 20px); /* grow, shrink, basis */
   background-color: var(--medgray);
   color: var(--white);
   padding: 15px 20px;
@@ -252,13 +256,16 @@ section {
 }
 
 #clients section div {
-  flex: 0 1 calc(100% / 6 - 20px); /* grow, shrink, basis */
+  display:flex; 
+  flex: 0 1 calc(100% / 6 - 16px); /* grow, shrink, basis */
   background-color: var(--white);
-  color: var(--white);
+  box-sizing: border-box;
   padding: 10px;
+  color: var(--white);
   border-radius: 8px; 
-  height:100px;
-  width:100px; 
+  align-items: center;
+  justify-content: center;
+  min-width: 0; /* allow shrinking inside flex */
 }
 
 
@@ -277,51 +284,153 @@ section {
   font-size: 35px;
 }
 
-.container .fe{
-  box-shadow: 0px 0px 3px green;
+
+.container .fe, .container .be, .container .misc, .container .ss, .container .other, .other i{
+  box-shadow: 0px 0px 2px var(--hilightgray);
 }
 
-.fe i{
-  color:green; 
-}
-
-.container .be{
-  box-shadow: 0px 0px 3px orange;
-}
-
-.be i{
-  color:orange; 
-}
-
-.container .misc{
-  box-shadow: 0px 0px 3px red;
-}
-
-.misc i{
-  color:red; 
-}
-
-.container .ss{
-  box-shadow: 0px 0px 3px lightblue;
-}
-
-.ss i{
-  color:lightblue; 
-}
-
-.container .other{
-  box-shadow: 0px 0px 3px lightblue;
-}
-
-.other i{
-  color:lightblue; 
-}
 
 section div span{
   display:block;
   margin-top:12px;
   font-size:12px;
 }
+
+#html-icon:hover{
+  box-shadow: 0px 0px 3px #f16524;
+  background: linear-gradient(120deg, #e4bba850, var(--Iconbk));
+}
+
+#html-icon:hover i{
+  color:#f16524;
+}
+
+#css-icon:hover{
+  box-shadow: 0px 0px 3px #36adde;
+  background: linear-gradient(120deg, #aed7e950, var(--Iconbk));
+}
+
+#css-icon:hover i{
+   color: #36adde;
+}
+
+#js-icon:hover{
+  box-shadow: 0px 0px 3px #f2c12d;
+  background: linear-gradient(120deg, #f0dea950, var(--Iconbk));
+}
+
+#js-icon:hover i{
+  color: #f2c12d;
+}
+
+#git-icon:hover{
+  box-shadow: 0px 0px 3px #f05539;
+  background: linear-gradient(120deg, #e8bab250, var(--Iconbk));
+}
+
+#git-icon:hover i{
+  color: #f05539;
+}
+
+#wp-icon:hover{
+  box-shadow: 0px 0px 3px #28799e;
+  background: linear-gradient(120deg, #708c9950, var(--Iconbk));
+}
+
+#wp-icon:hover i{
+  color: #28799e;
+}
+
+#php-icon:hover{
+  box-shadow: 0px 0px 3px #7b7fb5;
+  background: linear-gradient(120deg, #8f91af50, var(--Iconbk));
+}
+
+#php-icon:hover i{
+  color: #7b7fb5;
+}
+
+#cpannel-icon:hover i{
+  color: #f76f25; 
+}
+
+#cpannel-icon:hover{
+  box-shadow: 0px 0px 3px #f76f25;
+  background: linear-gradient(120deg, #f3cdb950, var(--Iconbk));
+}
+
+#ftp-icon:hover i{
+   color: #31b8ea;
+}
+
+#ftp-icon:hover{
+  box-shadow: 0px 0px 3px #31b8ea;
+  background: linear-gradient(120deg, #9ad0e350, var(--Iconbk));
+}
+
+#ps-icon:hover i{
+   color: #36abff;
+}
+
+#ps-icon:hover{
+  box-shadow: 0px 0px 3px #36abff;
+  background: linear-gradient(120deg, #36abff50, var(--Iconbk));
+}
+
+#figma-icon:hover i{
+   color: #ff7667;
+}
+
+#figma-icon:hover{
+  box-shadow: 0px 0px 3px #ff7667;
+  background: linear-gradient(120deg, #fcc7c150, var(--Iconbk));
+}
+
+#seo-icon:hover i{
+   color: #fbbe1b;
+}
+
+#seo-icon:hover{
+  box-shadow: 0px 0px 3px #fbbe1b;
+  background: linear-gradient(120deg, #fae7b050, var(--Iconbk));
+}
+
+#Mailchimp-icon:hover i{
+   color: #ffe122;
+}
+
+#Mailchimp-icon:hover{
+  box-shadow: 0px 0px 3px #ffe122;
+  background: linear-gradient(120deg, #fef5b850, var(--Iconbk));
+}
+
+#datastu-icon:hover i{
+   color: #669df6;
+}
+
+#datastu-icon:hover{
+  box-shadow: 0px 0px 3px #669df6;
+  background: linear-gradient(120deg, #b6cbee50, var(--Iconbk));
+}
+
+#crm-icon:hover i{
+   color: #c7c7c7;
+}
+
+#crm-icon:hover{
+  box-shadow: 0px 0px 3px #c7c7c7;
+  background: linear-gradient(120deg, #a5a5a550, var(--Iconbk));
+}
+
+#ss-icon:hover i{
+   color: #3fc5ed;
+}
+
+#ss-icon:hover{
+  box-shadow: 0px 0px 3px #3fc5ed;
+  background: linear-gradient(120deg, #a5d6e550, var(--Iconbk));
+}
+
 
 /*******Project Section*******/
 
@@ -340,8 +449,16 @@ section div span{
   padding: 20px;
 }
 
+.Addskill{
+  font-size:16px;
+  font-weight:bold;
+  color:var(--accent)
+}
 
-.techstack {
+.AddskillInfinate{
+  font-size:22px;
+  font-weight:bold; 
+  color:var(--accent)
 } 
 
 .techstack span{
@@ -351,7 +468,6 @@ section div span{
   flex:0 1 auto;
 }
 
-
 /*******Clients Section*******/
 
 #clients img{
@@ -360,15 +476,20 @@ section div span{
   object-fit: contain;
 }
 
-/*******Contact Section****
+/*******Contact Section*******/
 
 
 
 /*******Responsive Styles*******/
 
+@media (max-width: 1700px) {
+  header {
+    width:90%;
+  }
+}
+
+
 @media (max-width: 800px) {
-
-
 
   section {
     flex-direction: column;
