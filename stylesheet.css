@@ -177,6 +177,12 @@ nav ul li a:hover {
 }
 
 
+/*******Mobile Menu Styles*******/
+
+.mobileicon {
+    display:none;
+}
+
 /*******Main Banner*******/
 
 #hero{
@@ -275,8 +281,6 @@ section {
   color: var(--white);
   padding: 10px;
   border-radius: 8px; 
-  height:100px;
-  width:100px; 
 }
 
 /*******Skills Icons*******/
@@ -480,6 +484,20 @@ section div span{
 /*******Contact Section*******/
 
 
+/*******Mobile Menu Styles*******/
+
+.mobileicon {
+    display:none;
+}
+
+.mobileicon i {
+  transition: transform 0.3s ease;
+}
+
+.mobileicon[aria-expanded="true"] i {
+  transform: rotate(90deg);
+}
+
 
 /*******Responsive Styles*******/
 
@@ -489,19 +507,110 @@ section div span{
   }
 }
 
+/* Desktop: show nav menu, hide hamburger */
+@media (min-width: 801px) {
+  nav {
+    display: block;
+  }
+  
+  .Mobmenu {
+    display: none;
+  }
+
+  #menu {
+    display: flex !important;
+    flex-direction: row;
+  }
+}
+
+
+/* Mobile: hide nav, show hamburger, toggle menu with .open class */
 
 @media (max-width: 800px) {
+
+  .Mobmenu {
+    text-align: center;
+    display: block;
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .mobileicon {
+    display: block;
+    font-size: 28px;
+    color: var(--hilightgray);
+    cursor: pointer;
+    margin: auto;
+  }
+
+  nav {
+    background: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  #menu {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--darkgray);
+    padding: 120px 1rem 1rem 1rem;
+    z-index: 999;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    margin: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, visibility 0.3s ease;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  #menu.open {
+    display: flex;
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #menu li {
+    margin: 0.5rem 0;
+    display: block;
+    padding: 0;
+  }
+
+  #menu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--hilightgray);
+  }
+
+  #menu a:hover {
+    background-color: var(--lightgray);
+    border-radius: 9999px;
+  }
 
   section {
     flex-direction: column;
   }
+
   section div {
     width: 100%;
     min-width: 0;
     margin-left: 0;
     margin-right: 0;
   }
+
+
+  #skills section div {
+  flex: 0 1 calc(100% / 2 - 20px); /* grow, shrink, basis */
 }
-
-
-
+}
