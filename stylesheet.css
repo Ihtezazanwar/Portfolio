@@ -182,7 +182,8 @@ nav ul li a:hover {
 #hero{
     text-align: center;
     color: var(--white);
-    margin: 40px 50px;
+    margin: auto;
+    padding: 40px 50px;
     max-width: var(--cont-width);
 }
 
