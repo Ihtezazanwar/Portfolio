@@ -10,8 +10,6 @@
     --hilightgray: #b8b8b8; /* light gray */
     --Iconbk: #1c1a1950; /* icon Back */
     --cont-width: 1200px; /* max content width */
-
-
 }
 
 /*******Global Styles*******/
@@ -124,6 +122,14 @@ body {
 	animation-duration: 1s;
 }
 
+.fade-in-slow {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration:4s;
+}
+
 @keyframes fadeInOpacity {
 	0% {
 		opacity: 0;
@@ -134,6 +140,17 @@ body {
 	100% {
 		opacity: 1;
 	}
+}
+
+.fade-container {
+  opacity: 0; 
+  transform: translate(0, 0);
+  transition: all 2s;
+}
+
+.fade-container.visible {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 
@@ -168,12 +185,16 @@ nav ul li a {
     text-decoration:none;
     color: var(--hilightgray); 
     padding:8px 20px;
+    transition: 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: var(--lightgray);
-    padding:8px 20px;
+    padding:8px 25px;
     border-radius: 9999px;
+    font-weight:bold;
+    color:var(--white); 
+    box-shadow: var(--hilightgray) 0px 0px 1px;
 }
 
 
@@ -202,8 +223,12 @@ nav ul li a:hover {
   margin-bottom:-45px;
 }
 
-#skills h2, #projects h2, #clients h2, #contact h2{
+#skills h2, #projects h2, #clients h2 {
   margin-bottom:30px;
+}
+
+#contact h2{
+  margin-bottom: 10px;
 }
 
 #skills{
@@ -231,7 +256,7 @@ section {
     flex-direction: row; 
     flex-wrap: wrap;
     justify-content: center;
-    gap:15px;
+    gap:20px;
     max-width: var(--cont-width);
     margin: auto;
 }
@@ -242,6 +267,12 @@ section {
   color: var(--white);
   padding: 15px 20px;
   border-radius: 8px;
+  transition: transform 0.5s ease;
+}
+
+
+#skills section div:hover, #skills section .other:hover {
+  transform: scale(1.1);
 }
 
 #skills section .other {
@@ -251,6 +282,7 @@ section {
   padding: 15px 20px;
   border-radius: 8px;
   margin-top:60px;
+  transition: transform 0.5s ease;
 }
 
 
@@ -258,8 +290,18 @@ section {
   flex: 0 1 calc(100% / 3 - 20px); /* grow, shrink, basis */
   background-color: var(--medgray);
   color: var(--white);
-  padding: 0px;
   border-radius: 8px;
+  transition: transform 0.5s ease;
+}
+
+.pro-section a{
+  text-decoration:none;
+}
+
+.pro-section:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 2px var(--hilightgray);
+
 }
 
 #clients section div {
@@ -290,7 +332,7 @@ section {
 }
 
 
-.container .fe, .container .be, .container .misc, .container .ss, .container .other, .other i{
+.container .fe, .container .be, .container .misc, .container .ss, .container .other{
   box-shadow: 0px 0px 2px var(--hilightgray);
 }
 
@@ -437,11 +479,17 @@ section div span{
 }
 
 
-/*******Project Section*******/
-
-#projects section div .project-info{
-  padding:20px;
+#other-icon:hover i{
+   color: #3fc5ed;
 }
+
+#other-icon:hover{
+  box-shadow: 0px 0px 3px #3fc5ed;
+  background: linear-gradient(120deg, #a5d6e550, var(--Iconbk));
+}
+
+
+/*******Project Section*******/
 
 #projects img{
   width:100%;
@@ -450,8 +498,9 @@ section div span{
   object-fit: cover;
 }
 
-.project-info {
-  padding: 20px;
+
+.project-info{
+  padding:15px;
 }
 
 .Addskill{
@@ -481,7 +530,35 @@ section div span{
   object-fit: contain;
 }
 
+#cli-section div{
+  transition: transform 0.3s ease;
+}
+
+#cli-section div:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 4px var(--accent);
+}
+
 /*******Contact Section*******/
+
+#contact {
+  padding:40px;
+}
+
+.contact-icons a {
+  font-size:30px;
+  color: var(--white);
+}
+
+.contact-icons a i {
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.contact-icons a i:hover {
+  color: var(--accent);
+  transform: scale(1.3);
+}
 
 
 /*******Mobile Menu Styles*******/
@@ -507,9 +584,29 @@ section div span{
   }
 }
 
-/* Desktop: show nav menu, hide hamburger */
-@media (min-width: 801px) {
-  nav {
+
+
+@media (max-width: 992px) {
+  #skills section #tech-skills, #clients section {
+    flex-direction: row;
+  }
+
+   #skills section div {
+  flex: 0 1 calc(100% / 4 - 20px); /* grow, shrink, basis */
+}
+
+  #clients section div {
+  flex: 0 1 calc(100% / 4 - 16px); /* grow, shrink, basis */
+  }
+  
+}
+
+
+/* Mobile: hide nav, show hamburger, toggle menu with .open class */
+
+@media (max-width: 800px) {
+
+    nav {
     display: block;
   }
   
@@ -521,12 +618,6 @@ section div span{
     display: flex !important;
     flex-direction: row;
   }
-}
-
-
-/* Mobile: hide nav, show hamburger, toggle menu with .open class */
-
-@media (max-width: 800px) {
 
   .Mobmenu {
     text-align: center;
@@ -598,8 +689,16 @@ section div span{
     border-radius: 9999px;
   }
 
-  section {
+  #btnsection, #projects section, #cli-section, #contact-section {
     flex-direction: column;
+  }
+
+   #skills section div {
+  flex: 0 1 calc(100% / 3 - 20px); /* grow, shrink, basis */
+  }
+
+    #clients section div {
+  flex: 0 1 calc(100% / 3 - 16px); /* grow, shrink, basis */
   }
 
   section div {
@@ -608,9 +707,29 @@ section div span{
     margin-left: 0;
     margin-right: 0;
   }
+ 
+}
 
 
-  #skills section div {
+@media (max-width: 576px) {
+   #skills section div {
   flex: 0 1 calc(100% / 2 - 20px); /* grow, shrink, basis */
-}
-}
+} 
+
+#other-skills {
+  flex: 0 1 calc(100% / 1 - 20px); /* grow, shrink, basis */
+  flex-direction: column;
+  margin-top:30px;
+} 
+
+#skills section .other{
+  margin-top:8px;
+} 
+
+  #clients section div {
+  flex: 0 1 calc(100% / 2 - 16px); /* grow, shrink, basis */
+  } 
+
+} 
+
+
