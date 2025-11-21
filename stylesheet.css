@@ -20,7 +20,7 @@
 }
 
 p, a, li {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .bluegradient {
@@ -30,32 +30,32 @@ p, a, li {
 }
 
 h1{
-  font-size:60px;
+  font-size:3.7rem;
   margin:15px;
 }
 
 h2{
-  font-size:42px;
+  font-size:2.6rem;
   margin:14px;
 }
 
 h3{
-  font-size:38px;
+  font-size:2.3rem;
    margin:10px;
 }
 
 h4{
-  font-size:30px;
+  font-size:1.8rem;
   margin:10px;
 }
 
 h5{
-  font-size:20px;
+  font-size:1.2rem;
   margin:10px;
 }
 
 h6{
-  font-size:18px;
+  font-size:1.1rem;
   margin:10px;
 }
 
@@ -66,7 +66,7 @@ h6{
   font-weight:bold;
   padding:15px 30px;
   border-radius: 9999px;
-  font-size:20px;
+  font-size:1.2rem;
   margin: 20px;
 }
 
@@ -328,7 +328,7 @@ section {
 /*******Skills Icons*******/
 
 .container .fe i, .container .be i, .container .misc i,  .container .ss i, .container .other i{
-  font-size: 35px;
+  font-size: 2.1rem;
 }
 
 
@@ -340,7 +340,7 @@ section {
 section div span{
   display:block;
   margin-top:12px;
-  font-size:12px;
+  font-size:0.75rem;
 }
 
 #html-icon:hover{
@@ -504,13 +504,13 @@ section div span{
 }
 
 .Addskill{
-  font-size:16px;
+  font-size:1rem;
   font-weight:bold;
   color:var(--accent)
 }
 
 .AddskillInfinate{
-  font-size:22px;
+  font-size:1.3rem;
   font-weight:bold; 
   color:var(--accent)
 } 
@@ -546,7 +546,7 @@ section div span{
 }
 
 .contact-icons a {
-  font-size:30px;
+  font-size:1.8rem;
   color: var(--white);
 }
 
@@ -578,7 +578,7 @@ section div span{
 
 /*******Responsive Styles*******/
 
-@media (max-width: 1700px) {
+@media only screen and (max-width: 1700px) {
   header {
     width:90%;
   }
@@ -586,7 +586,7 @@ section div span{
 
 
 
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   #skills section #tech-skills, #clients section {
     flex-direction: row;
   }
@@ -604,7 +604,7 @@ section div span{
 
 /* Mobile: hide nav, show hamburger, toggle menu with .open class */
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
 
     nav {
     display: block;
@@ -630,7 +630,7 @@ section div span{
 
   .mobileicon {
     display: block;
-    font-size: 28px;
+    font-size: 1.7rem;
     color: var(--hilightgray);
     cursor: pointer;
     margin: auto;
@@ -711,7 +711,38 @@ section div span{
 }
 
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
+
+h1{
+  font-size:3.4rem;
+  margin:15px;
+}
+
+h2{
+  font-size:2.3rem;
+  margin:14px;
+}
+
+h3{
+  font-size:2rem;
+   margin:10px;
+}
+
+h4{
+  font-size:1.5rem;
+  margin:10px;
+}
+
+h5{
+  font-size:1.1rem;
+  margin:10px;
+}
+
+h6{
+  font-size:1rem;
+  margin:10px;
+}
+
    #skills section div {
   flex: 0 1 calc(100% / 2 - 20px); /* grow, shrink, basis */
 } 
@@ -732,4 +763,36 @@ section div span{
 
 } 
 
+@media only screen and (max-width: 450px) {
 
+h1{
+  font-size:2.7rem;
+  margin:15px;
+  text-decoration: double;
+}
+
+h2{
+  font-size:2rem;
+  margin:14px;
+}
+
+h3{
+  font-size:1.7rem;
+   margin:10px;
+}
+
+h4{
+  font-size:1.3rem;
+  margin:10px;
+}
+
+h5{
+  font-size:1.1rem;
+  margin:10px;
+}
+
+h6{
+  font-size:1rem;
+  margin:10px;
+}
+}
